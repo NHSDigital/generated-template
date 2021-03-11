@@ -15,7 +15,6 @@ install-hooks:
 lint:
 	npm run lint
 	find . -name '*.py' | xargs poetry run flake8
-	find -name '*.sh' | grep -v node_modules | xargs shellcheck
 
 clean:
 	rm -rf build
