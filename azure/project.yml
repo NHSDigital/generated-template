@@ -1,0 +1,7 @@
+variables:
+  service_name: generated-template
+  short_service_name: gt
+  service_base_path: generated-template
+  product_display_name: Generated Template
+  product_description: This is a generated template API
+  spec_file: generated-template.json
