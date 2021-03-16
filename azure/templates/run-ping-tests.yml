@@ -4,6 +4,7 @@ steps:
       export APIGEE_PROXY="$(FULLY_QUALIFIED_SERVICE_NAME)"
 
       poetry run pytest -v --junitxml=test-report.xml -m ping
+    workingDirectory: $(Pipeline.Workspace)/s/$(SERVICE_NAME)/$(SERVICE_ARTIFACT_NAME)
     displayName: run ping pytests
 
   - task: PublishTestResults@2
