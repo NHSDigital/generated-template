@@ -3,7 +3,7 @@ steps:
       export APIGEE_ENVIRONMENT="$(APIGEE_ENVIRONMENT)"
       export APIGEE_PROXY="$(FULLY_QUALIFIED_SERVICE_NAME)"
 
-      pytest -v --junitxml=test-report.xml -m ping
+      poetry run pytest -v --junitxml=test-report.xml -m ping
     workingDirectory: $(Pipeline.Workspace)/s/$(SERVICE_NAME)/$(SERVICE_ARTIFACT_NAME)/tests
     displayName: run ping pytests
 
