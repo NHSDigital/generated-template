@@ -46,6 +46,7 @@ release: clean publish build-proxy
 
 	cp ecs-proxies-deploy.yml dist/ecs-deploy-sandbox
 	cp ecs-proxies-deploy.yml dist/ecs-deploy-internal-qa-sandbox
+	cp ecs-proxies-deploy.yml dist/ecs-deploy-internal-dev-sandbox
 
 test:
 	echo "TODO: add tests"
