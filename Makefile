@@ -49,4 +49,4 @@ release: clean publish build-proxy
 	cp ecs-proxies-deploy.yml dist/ecs-deploy-internal-dev-sandbox.yml
 
 test:
-	echo "TODO: add tests"
+	poetry run pytest -v
