@@ -4,7 +4,7 @@ steps:
     displayName: Setup pytests
 
   - bash: |
-      export APIGEE_ENVIRONMENT="$(APIGEE_ENVIRONMENT)"
+      export APIGEE_ENVIRONMENT="$(ENVIRONMENT)"
       export APIGEE_PROXY="$(FULLY_QUALIFIED_SERVICE_NAME)"
 
       poetry run pytest -v --junitxml=test-report.xml -m ping
