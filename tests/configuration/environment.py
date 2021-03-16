@@ -11,6 +11,7 @@ def get_env(variable_name: str) -> str:
     except KeyError:
         raise RuntimeError(f"Variable is not set, Check {variable_name}.")
 
+
 ENV = {
     # Apigee
     "environment": get_env("APIGEE_ENVIRONMENT"),

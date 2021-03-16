@@ -1,4 +1,3 @@
-import pytest
 import requests
 from .configuration import config
 # from api_test_utils.oauth_helper import OauthHelper
