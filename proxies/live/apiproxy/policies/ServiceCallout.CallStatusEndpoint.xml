@@ -9,13 +9,15 @@
         To point to a named target server as this is how it SHOULD be implemented:
         For example:
         <HTTPTargetConnection>
-        <SSLInfo>
-            <Enabled>true</Enabled>
-        </SSLInfo>
-        <LoadBalancer>
-            <Server name="{{ config['x-meta'].service_name }}-target" />
-        </LoadBalancer>
+            <SSLInfo>
+                <Enabled>true</Enabled>
+            </SSLInfo>
+            <LoadBalancer>
+                <Server name="generated-template-target"/>
+            </LoadBalancer>
+            <Path>/_status</Path>
         </HTTPTargetConnection>
+        <Timeout>20000</Timeout>
     -->
     <HTTPTargetConnection>
         <URL>http://mocktarget.apigee.net</URL>
@@ -26,3 +28,4 @@
         </Properties>
         <Path>/_status</Path>
     </HTTPTargetConnection>
+</ServiceCallout>
