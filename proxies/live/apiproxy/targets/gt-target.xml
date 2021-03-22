@@ -41,7 +41,7 @@
         <Enabled>true</Enabled>
       </SSLInfo>
       <LoadBalancer>
-        <Server name="generated-template-target" />
+        <Server name="generated-template" />
       </LoadBalancer>
     </HTTPTargetConnection>
   -->
