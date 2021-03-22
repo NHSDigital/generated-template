@@ -55,8 +55,7 @@
     <VirtualHost>secure</VirtualHost>
   </HTTPProxyConnection>
   <RouteRule name="NoRoute">
-    <Condition>request.verb == "OPTIONS" AND request.header.origin != null AND
-      request.header.Access-Control-Request-Method != null
+    <Condition>(request.verb == "OPTIONS") and (request.header.origin != null) and (request.header.Access-Control-Request-Method != null)
     </Condition>
   </RouteRule>
   <RouteRule name="NoRoutePing">
