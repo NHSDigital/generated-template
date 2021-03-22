@@ -1,8 +1,8 @@
 import os
 from functools import partial
-
 import pytest
 from aiohttp import ClientResponse
+
 from api_test_utils.api_session_client import APISessionClient
 from api_test_utils.api_test_session_config import APITestSessionConfig
 from api_test_utils import poll_until
@@ -39,7 +39,7 @@ async def test_wait_for_ping(api_client: APISessionClient, api_test_config: APIT
     is_deployed = partial(_is_deployed, api_test_config=api_test_config)
 
     await poll_until(
-        make_request=lambda: api_client.get('_ping'),
+        make_request=lambda: api_client.session.get(f'{api_test_config.base_uri}/_ping'),
         until=is_deployed,
         timeout=120
     )
